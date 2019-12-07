@@ -10,7 +10,7 @@ source:
   sha256: 612c4c95531ea9239c91e6f8b9e29a954ac873dd8584b6a57512dcfb6263ff0a
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<35]
 
@@ -58,3 +58,5 @@ about:
 extra:
   recipe-maintainers:
     - schiotz
+    - jacobjma
+    
