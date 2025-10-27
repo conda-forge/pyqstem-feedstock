@@ -26,11 +26,11 @@ requirements:
     - numpy
     - python
     - pip
+    - setuptools
   run:
     - ase
     - fftw
     - matplotlib-base
-    - {{ pin_compatible('numpy') }}
     - python
     - scikit-image
     - scipy
