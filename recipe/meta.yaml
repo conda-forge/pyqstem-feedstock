@@ -12,24 +12,25 @@ source:
     - Remove-unused-scipy-import-leading-to-crashes.patch
 
 build:
-  number: 6
+  number: 7
   script: "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [py<35]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - cython
     - fftw
     - numpy
     - python
     - pip
+    - setuptools
   run:
     - ase
     - fftw
     - matplotlib-base
-    - {{ pin_compatible('numpy') }}
     - python
     - scikit-image
     - scipy
